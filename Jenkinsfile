@@ -13,6 +13,14 @@ pipeline {
             steps {
               sh "mvn test"
             }
+
+            post {
+              always {
+                  junit 'taget/sunfire-reports/*.xml'
+                  jacoco execPattern: 'target/jacoco.exec'
+              }
+                 
+            }
         }   
     }
 }
