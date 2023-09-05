@@ -21,6 +21,16 @@ pipeline {
               }
                  
             }
-        }   
-    }
+        }  
+
+      stage('Docker Build & Push') {
+        steps{
+          withDockerRegistry([credentialsId: "DockerHub_Creds", url:""]){
+            sh 'printenv'
+            sh 'docker build -t simplysamy/numeric-app:""$GIT_COMMIT"" .'
+            sh 'docker push simplysamy/numeric-app:""$GIT_COMMIT""'
+          }
+        }
+      }
+  }
 }
