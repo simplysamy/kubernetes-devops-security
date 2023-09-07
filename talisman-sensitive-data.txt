@@ -1,0 +1,5 @@
+mkdir sec_files && cd sec_files
+echo "username=sameer" > file1
+echo "secure-password123" > password.txt
+echo "apikey=AIzaSyCqhjgrPtr_LA56sdukjFav_laCghjgrPtr_2s" > file2
+echo "base64encodedsecret=cGFzc3dvcmQtaXMtcXdlcnR5MTIzCg==" > file3
