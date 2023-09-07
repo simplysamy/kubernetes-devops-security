@@ -85,9 +85,7 @@
         		
 				<configuration>
 					<!-- PITest configuration -->
-					<mutationThreshold>
-						<minimum>70</minimum>
-					</mutationThreshold>
+					<mutationThreshold>70</mutationThreshold>
 					<outputFormats>
 						<outputFormat>XML</outputFormat>
 						<outputFormat>HTML</outputFormat>
